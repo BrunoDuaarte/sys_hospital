@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Especializacoes
 
-# Register your models here.
+@admin.register(Especializacoes)
+class EspecializacaoAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
+    search_fields = ('nome',)
+
